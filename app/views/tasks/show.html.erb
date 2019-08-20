@@ -1,0 +1,15 @@
+<h3><%= @task.title %></h3>
+<br>
+<%= @task.details %>
+<br>
+<br>
+<%= @completed %>
+<br>
+<br>
+<%= link_to 'Edit'.html_safe, edit_task_path %>
+
+<%= link_to 'Delete'.html_safe, task_path(@task),
+      method: :delete,
+      data: { confirm: "Are you sure to delete #{@task.title}?" } %>
+<hr>
+<%= link_to '<i class="fa fa-chevron-left">Back to list</i>'.html_safe, tasks_path %>
